@@ -1,12 +1,19 @@
 //npn init
 //npm i cowsay
 
-var cowsay = require("cowsay");
 
+
+const Quote = require('inspirational-quotes');
+
+const sayIt = Quote.getRandomQuote();
+
+
+var cowsay = require("cowsay");
 console.log(
   cowsay.say({
-    text: "I'm a moooodule",
+    text: sayIt,
     e: "oO",
     T: "U ",
   })
 );
+
